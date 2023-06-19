@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>seller</title>
+</head>
+<body>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        color: #3366cc;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+    inputtype="text" {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    inputtype="submit" {
+        background-color: #3366cc;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    inputtype="submit":hover {
+        background-color: #244973;
+    }
+    form {
+        margin-bottom: 30px;
+    }
+    label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+</style>
+    <h1>TechIndustry</h1>
+    <p>Нажми <a th:href="@{/sellers}">сюда</a>, для просмотра списка всех продаж и активных продавцов.</p>
+    <form th:action="@{/sale}" method="post">
+        <div><label> ID sale : <input type="text" name="id"/> </label></div>
+        <div><input type="submit" value="Sign In"/></div>
+    </form>
+
+    <form th:action="@{/sale/createSale}" method="post">
+        <div><label> ID sale : <input type="text" name="id"/> </label></div>
+        <div><label> Sum sale : <input type="text" name="sumSale"/> </label></div>
+        <div><label> Date receipt goods : <input type="text" name="dateReceiptGoods"/> </label></div>
+        <div><label> Date sale: <input type="text" name="dateSale"/> </label></div>
+        <div><label> ID goods: <input type="text" name="idGoods"/> </label></div>
+        <div><input type="submit" value="Sign In"/></div>
+    </form>
+    </body>
+</html>

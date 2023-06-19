@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users Online</title>
+
+    <style>
+ body {
+        font-family: Arial, sans-serif;
+    }
+    h2 {
+        color: #3366cc;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            margin-top: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+<h2>Currently logged in users</h2>
+<div th:each="user : ${users}">
+    <p th:text="${user}">user</p>
+</div>
+</body>
+</html>

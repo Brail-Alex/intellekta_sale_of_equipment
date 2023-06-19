@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sellers</title>
+
+    <style>
+     body {
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        color: #3366cc;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>TechIndustry</h1>
+<p>Нажми <a th:href="@{sale/getAllSales}">сюда</a>, для просмотра всех продаж.</p>
+<p>Нажми <a th:href="@{sale/usersLogged}">сюда</a>, для просмотра продавцов в сети.</p>
+</body>
+</html>
